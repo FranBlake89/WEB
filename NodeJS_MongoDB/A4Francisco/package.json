@@ -1,0 +1,18 @@
+{
+  "name": "a4francisco",
+  "version": "1.0.0",
+  "description": "Create a web application that displays and manipulates a list of Youtube videos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Francisco Castillo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.4",
+    "handlebars": "^4.7.7",
+    "mongoose": "^7.0.3"
+  }
+}

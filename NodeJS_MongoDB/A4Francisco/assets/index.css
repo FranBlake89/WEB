@@ -1,0 +1,173 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+    background: -webkit-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); 
+    background: -o-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); 
+    background: -moz-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); 
+    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); 
+    
+}
+header{
+    background-color: #702A8C;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+body h1 {
+    color: white;
+    text-align: center;
+    margin: 1em;
+    font-size: 100px;
+}
+body h4 {
+    color: white;
+    text-align: center;
+    font-size: 34px;
+}
+body div {
+    text-align: center;
+}
+header div {
+    text-align: center;
+}
+header div:first-of-type {
+    padding-left: 10px;
+    padding-left: 3em;
+}
+header div a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+header a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+  
+  /* Add a color to the active/current link */
+header a.active {
+    background-color: rgb(255, 115, 38);
+    color: white;
+}
+
+body .search-container {
+
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+body .search-container form input{
+    width: 40%;
+    padding: 11px;
+    margin: -2.98em;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+body .search-container button {
+
+    background: none;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+  
+body .search-container button:hover {
+    background: #ccc;
+}
+#errorMsg {
+    color: crimson;
+    text-align: center;
+    font-size: 28px;
+    background: #f0f8ffb8;
+    padding: 30px;
+   
+
+}
+.grid-cards{
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: auto;
+  align-content: start;
+  margin: 0 auto;
+  color: snow;
+}
+.grid-cards main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards{
+    flex: 0 0 auto;
+    margin: 10px;
+}
+main{
+    margin: 0 10%;
+}
+.cards footer form button{
+    background-color: rgb(223, 101, 36);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 10px;
+    box-shadow: 3px 8px 15px  #f2f2f2;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  
+}
+
+#delete-section{
+    color: snow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+#delete-btn{
+    background-color: rgb(197, 5, 5);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 10px;
+    
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+#delete hr{
+    border: 1px solid #09f3c196;
+    border-radius: 3px;
+    margin-bottom: 1em;
+}
+#delete-btn:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 10px;
+    box-shadow: 3px 8px 15px  #f2f2f2;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}

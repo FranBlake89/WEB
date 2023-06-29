@@ -1,0 +1,61 @@
+{{!-- /*
+++++++++++++++++++++++++++++++++
+Name: Francisco Castillo
+Course: WEB'322'
+Section: NAA
+++++++++++++++++++++++++++++++++
+*/ --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>RENT WEBPAGE</title>
+</head>
+<body>
+    <header>
+    <div>
+        <a class="active" href="/">HOME</a>
+        <a href="/catalogue">CATALOGUE</a>
+    </div>
+    <h2> Francisco's Rentals </h2>
+    <div class="search-container">
+        <form id="search-form" action="/search" method="get">
+            <input type="text" placeholder="Search.." name="query" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</header>
+    <main>
+        <h1>Why buy when you can rent ? </h1>
+        <h3>here are examples of the amazing electronics that you could be renting today! </h3>
+
+{{!-- HERE RANDOM PRODUCTS --}}   
+        {{#if items.length}}
+          <div id="grid-display-2">
+            {{#each items}}
+              {{> cardHome this}}
+            {{/each}}
+          </div>
+        {{/if}}
+
+        <a href="/catalogue"> See All Items >> </a>
+
+    </main>
+
+</body>
+</html>
+
+
+   {{!-- <p>  {{ items.[0].quantity }} </p>
+   <img src="{{ items.[0].image }}" alt="{{items[0].title}}"> --}}
+
+    
+    {{!-- {{#each items}}
+        <p>{{this.title}}</p>
+        <img src="{{ this.image }}" alt="{{this.title}}">
+    {{/each}} --}}

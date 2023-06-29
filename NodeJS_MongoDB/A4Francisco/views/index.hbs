@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="/index.css">
+    <title>More than reggaetton</title>
+</head>
+<body>
+
+    {{>header}}
+
+    <h1> > than Reggaeton </h1>
+    <h4>Discover another kind of Latin music</h4>
+    <div class="search-container">
+        <form id="search-form" action="/search" method="get">
+            <input type="text" placeholder="Search.." name="query" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <main>
+        {{#if errorMsg}}
+            <p id="errorMsg">{{errorMsg}}</p>
+        {{/if}}
+        <div class="grid-cards">
+            {{#each videos}}
+            {{> card this}}
+            {{/each}}
+        </div>
+
+    </main>
+
+</body>
+</html>

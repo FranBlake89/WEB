@@ -1,0 +1,29 @@
+
+
+{{!-- /*
+++++++++++++++++++++++++++++++++
+Name: Francisco Castillo
+Course: WEB'322'
+Section: NAA
+++++++++++++++++++++++++++++++++
+*/ --}}
+<div class="grid-cards">
+    <div class="cards">
+        <h3>{{this.titleVideo}}</h3>
+        <img src="{{this.image}}" alt="video image" width="560" height="315">
+            
+        <main>
+            <p> Channel: {{this.chanel}}</p>
+            <p> Upload date: {{this.uploadDate}}</p>
+
+        </main>
+        <footer>
+            <form method="POST" action="/details/{{this.videoID}}">               
+                <button type="submit">View Details</button>
+            </form>
+    
+        </footer> 
+            
+    </div>
+</div>
+

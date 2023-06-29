@@ -1,0 +1,29 @@
+jest-haste-map: Haste module naming collision: web-assignment-starter
+  The following files share their name; please adjust your hasteImpl:
+    * <rootDir>\submission\package.json
+    * <rootDir>\package.json
+
+PASS submission/src/problem-4.test.js (5.702s)
+PASS submission/src/problem-8.test.js (5.582s)
+PASS submission/src/problem-6.test.js (5.895s)
+PASS submission/src/problem-7.test.js (5.641s)
+PASS src/problem-4.test.js (5.853s)
+PASS src/problem-6.test.js (5.958s)
+PASS src/problem-8.test.js (5.856s)
+PASS submission/src/problem-5.test.js
+PASS src/problem-7.test.js
+PASS submission/src/problem-2.test.js
+PASS src/problem-2.test.js
+PASS submission/src/problem-3.test.js
+PASS src/problem-5.test.js
+PASS src/problem-3.test.js
+PASS submission/src/problem-0.test.js
+PASS src/problem-0.test.js
+PASS submission/src/problem-1.test.js
+PASS src/problem-1.test.js
+
+Test Suites: 18 passed, 18 total
+Tests:       90 passed, 90 total
+Snapshots:   0 total
+Time:        11.736s
+Ran all test suites.

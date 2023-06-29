@@ -1,0 +1,63 @@
+{{!-- /*
+++++++++++++++++++++++++++++++++
+Name: Francisco Castillo
+Course: WEB'322'
+Section: NAA
+++++++++++++++++++++++++++++++++
+*/ --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="main.css" type="text/css" >
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CATALOGUE</title>
+</head>
+<body>
+    <header>
+    <div>
+        <a  href="/">HOME</a>
+        <a class="active" href="/catalogue">CATALOGUE</a>
+    </div>
+    <h2> Francisco's Rentals </h2>
+    <div class="search-container">
+        <form id="search-form" action="/search" method="get">
+            <input type="text" placeholder="Search.." name="query" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</header>
+    <main>
+
+        <h1> Rental Catalogue </h1>
+        <br>
+        <br>
+       <div id="filter">   
+            <form action="/filter" method="get">
+                <p>Modify Results:</p>
+                <select name="choose" id="choose">
+                    <option value="2">Choose one...</option>
+                    <option value="true">Available Items</option>
+                    <option value="false">Your Rentals</option>
+                </select>
+                <button>Update</button>
+            </form>
+
+            <form method="POST" action="/return-All">
+                <button>Return All items</button>
+            </form>
+       </div>
+        <hr>
+        
+        <div id="grid-display-2">
+            {{#each items}}
+                {{> card this}}
+            {{/each}} 
+        </div>
+
+
+    </main>
+</body>
+</html>

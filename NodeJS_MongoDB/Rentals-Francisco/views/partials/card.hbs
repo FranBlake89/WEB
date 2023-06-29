@@ -1,0 +1,22 @@
+
+{{!-- /*
+++++++++++++++++++++++++++++++++
+Name: Francisco Castillo
+Course: WEB'322'
+Section: NAA
+++++++++++++++++++++++++++++++++
+*/ --}}
+<div class="cards">
+    <h3>{{this.name}}</h3>
+    <img src="{{ this.imageURL }}" alt="{{this.name}} alt">
+    <footer>
+        {{#if this.available}}
+            <form method="POST" action="/rent/{{this.id}}">  
+                <input type="number" name="numberDays" placeholder="Days to rent? (min {{this.minRental}})" value="{{this.minRental}}">             
+                <button type="submit">Rent</button>
+            </form>
+        {{else}}
+            <p id="available">Rented by you</p>                                     
+        {{/if}}  
+    </footer>
+</div>

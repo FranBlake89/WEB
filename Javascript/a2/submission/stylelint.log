@@ -1,0 +1,3 @@
+Error: No files matching the pattern "src/**/*.css" were found.
+    at D:\OneDrive\Documents\SENECA\CPP_Docs\2_Fall_Term\WEB-222\assignment-2\node_modules\stylelint\lib\standalone.js:211:12
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

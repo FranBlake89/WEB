@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="stylesheet" type="text/css" href="/style-details.css">
+
+    <title>{{ video.titleVideo }}</title>
+</head>
+<body>
+
+ {{>header}}
+
+
+
+    <div id="grid-video">
+        <h2>{{ video.titleVideo }}</h2>
+        <br>
+        
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ video.videoID }}"
+                title="{{ video.titleVideo }}" frameborder="0" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen> </iframe>
+        <div>
+            <p><b> {{video.chanel}} </b></p>
+            <p>Upload Date: {{video.uploadDate}}</p>
+        </div>
+
+        <form id="like-form"action="/like/{{video.videoID}}" method="POST">
+            <p id="like-count">{{video.likes}}</p> 
+            <button id="like-button">Like</button>   
+        </form>
+
+        <form id="comment-form" action="/add-comment/{{video.videoID}}" method="POST">
+            <input type="text" placeholder="Username" name="username" />
+            <input type="text" placeholder="Comment here.." name="comment" />
+            <button type="submit" id="comment-button">Comment</button>
+        </form>
+
+        <ul id="comment-list">
+             {{#if noComment}}
+                <p>no comment found!</p>
+            {{/if}}
+
+
+                {{#each comments}}
+                    <li class="comments">
+                        <p><b>{{this.userName}}</b> said:</p>
+                        <p> {{this.comment}}</p>
+                    </li>     
+                    <hr/>
+                {{/each}}
+           
+        </ul>
+    </div>
+
+
+</body>
+
+
+</html>
